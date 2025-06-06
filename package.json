@@ -7,9 +7,18 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^5.2.5",
+    "@tiptap/extension-color": "^2.14.0",
+    "@tiptap/extension-text-style": "^2.14.0",
+    "@tiptap/pm": "^2.14.0",
+    "@tiptap/react": "^2.14.0",
+    "@tiptap/starter-kit": "^2.14.0",
+    "@types/react-router-dom": "^5.3.3",
     "antd": "^5.25.4",
     "axios": "^1.9.0",
     "dayjs": "^1.11.13",

@@ -8,7 +8,7 @@ import filterStore from '@shared/stores/filterStore'
 export const NotesList: FC = observer(() => {
 
     return (
-        <Flex vertical gap={".5rem"}>
+        <Flex vertical gap={".5rem"} style={{overflowY: "auto"}}>
             {notesStore.getUserNotes
                 .slice()
                 .sort((a, b) => b.createdAt.seconds - a.createdAt.seconds)

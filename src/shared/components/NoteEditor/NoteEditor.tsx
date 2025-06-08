@@ -86,7 +86,7 @@ const NoteEditor: FC = observer(() => {
                         <FiSave size={16} />
                     </Button>
                     <Popconfirm 
-                        title={"Удалить замекту"}
+                        title={"Удалить заметку"}
                         description={"Вы действительно хотите удалить заметку?"}
                         okText={"Да"}
                         cancelText={"Отмена"}

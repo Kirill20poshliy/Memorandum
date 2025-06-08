@@ -3,7 +3,7 @@ import StarterKit from '@tiptap/starter-kit'
 import TextStyle from '@tiptap/extension-text-style'
 import Color from '@tiptap/extension-color'
 import notesStore from '@shared/stores/notesStore'
-import { Button, Flex, Input, Spin } from 'antd'
+import { Button, Flex, Input, Popconfirm, Spin } from 'antd'
 import { observer } from 'mobx-react-lite'
 import { useEffect, type FC } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -85,13 +85,21 @@ const NoteEditor: FC = observer(() => {
                     }}>
                         <FiSave size={16} />
                     </Button>
-                    <Button onClick={() => {
-                        if (id) {
-                            notesStore.deleteNote(id).then(() => navigate('/'))
-                        }
-                    }}>
-                        <FiTrash2 size={16} />
-                    </Button>
+                    <Popconfirm 
+                        title={"Удалить замекту"}
+                        description={"Вы действительно хотите удалить заметку?"}
+                        okText={"Да"}
+                        cancelText={"Отмена"}
+                        onConfirm={() => {
+                            if (id) {
+                                notesStore.deleteNote(id).then(() => navigate('/'))
+                            }
+                        }}
+                    >
+                        <Button>
+                            <FiTrash2 size={16} />
+                        </Button>
+                    </Popconfirm>
                 </Flex>
             </Flex>
             <div className="tiptap-editor">

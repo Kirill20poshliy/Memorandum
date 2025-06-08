@@ -1,0 +1,35 @@
+.note-item {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    border-bottom: 1px solid #c1c1c1;
+    padding: .5rem;
+    transition: all ease-out .3s;
+    border-radius: .5rem;
+
+    &:hover {
+        background-color: #c1c1c1;
+    }
+
+    .title {
+        color: #383838;
+        font-size: 1rem;
+        font-weight: 500;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .date {
+        font-size: .75rem;
+        align-self: end;
+        color: #383838;
+        opacity: .5;
+    }
+
+    &.active {
+        background-color: #c1c1c1;
+    }
+}

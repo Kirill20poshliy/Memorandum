@@ -1,0 +1,19 @@
+.menu-bar {
+    background: transparent;
+    padding: 0;
+    border: 0 !important;
+
+    .ant-btn {
+        background: rgba(255, 255, 255, 0.1);
+        border: 0;
+        color: inherit;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        &.active {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
